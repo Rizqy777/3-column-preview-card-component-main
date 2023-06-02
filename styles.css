@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root{
+    /* ### Primary */
+
+--orange: hsl(31, 96%, 52%);
+
+--blue: hsl(184, 100%, 22%);
+--green: hsl(179, 100%, 13%);
+
+/* ### Neutral */
+
+--Transparent-white: hsla(0, 0%, 100%, 0.75);
+--bg-button: hsl(0, 0%, 95%);
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    Font-size: 15px;
+    background-color: var(--bg-button);
+}
+
+.container_main{
+    width: 900px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 10px;
+    overflow: hidden;
+    height: auto;
+    
+}
+
+.container_main-orange, .container_main-blue, .container_main-green{
+    padding: 40px;
+    
+}
+
+.container_main-orange{
+    background-color: var(--orange);
+}
+
+.container_main-blue{
+    background-color: var(--blue);
+}
+
+.container_main-green{
+    background-color: var(--green);
+}
+
+.title{
+    color: var(--bg-button);
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    margin: 30px 0 ;
+    font-size: 2.5rem;
+}
+
+.text{
+    color: var(--Transparent-white);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 1em;
+    margin-bottom: 80px;
+}
+
+.button{
+    padding: 10px 30px;
+    border-radius: 20px;
+    display: block;
+    background-color: var(--bg-button);
+    text-decoration: none;
+    font-family: 'Lexend Deca', sans-serif;
+    transition: 0.4s;
+    
+}
+
+.button:hover{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.button_orange{
+    color: var(--orange);
+}
+
+.button_blue{
+    color: var(--blue);
+}
+
+.button_green{
+    color: var(--green);
+}
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+
+}
+
+@media (max-width: 375px){
+
+    body{
+        height: 100%;
+    }
+    
+
+.container_main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 90%;
+    min-width: 200px;
+    height: 90%;
+    margin: 50px 0;
+
+}
+
+.button{
+    width: 70%;
+    min-width: 100px;
+}
+.attribution{
+    position: absolute;
+    top: 0;
+}
+}
+
